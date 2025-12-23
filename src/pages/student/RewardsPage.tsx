@@ -82,6 +82,23 @@ export default function RewardsPage() {
 
   return (
     <AppLayout role="student" playCoins={currentBalance} title="Rewards Marketplace">
+      <style>{`
+        @media (max-width: 640px) {
+          .accent-blur-bg {
+            width: 249px !important;
+            height: 327px !important;
+          }
+          .edu-coin-header {
+            width: 20px !important;
+          }
+          .edu-coin-earned {
+            width: 35px !important;
+          }
+          .hero-coin-image {
+            margin: 10px auto 10px 0 !important;
+          }
+        }
+      `}</style>
       <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 px-4 py-6 pb-28 relative overflow-hidden">
         {/* Animated Background Decorations */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-40" />

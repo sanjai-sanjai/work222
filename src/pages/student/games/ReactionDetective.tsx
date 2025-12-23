@@ -209,6 +209,8 @@ export default function ReactionDetective() {
       selectedEffects: [],
       hasReacted: false,
       feedback: "",
+      isReacting: false,
+      showObservationPanel: false,
     });
     setShowCompletion(false);
   };

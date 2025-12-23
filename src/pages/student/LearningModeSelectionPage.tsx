@@ -95,33 +95,13 @@ const subjectConfig: Record<string, {
 const learningModes = [
   {
     id: "active",
-    title: "Active Learning",
+    title: "Start learning   ",
     description: "Learn by doing and interacting",
     details: "Complete levels, solve problems, and build skills step by step",
     icon: Target,
     gradient: "from-primary/30 to-primary/10",
     borderColor: "border-primary/40",
     pathKey: "activePath" as const,
-  },
-  {
-    id: "passive",
-    title: "Passive Learning",
-    description: "Learn by reading and understanding",
-    details: "Read chapters, explore concepts, and learn at your own pace",
-    icon: BookOpen,
-    gradient: "from-secondary/30 to-secondary/10",
-    borderColor: "border-secondary/40",
-    pathKey: "passivePath" as const,
-  },
-  {
-    id: "gamified",
-    title: "Gamified Learning",
-    description: "Learn through missions and challenges",
-    details: "Play games, complete missions, and earn rewards while learning",
-    icon: Gamepad2,
-    gradient: "from-accent/30 to-accent/10",
-    borderColor: "border-accent/40",
-    pathKey: "gamifiedPath" as const,
   },
 ];
 
@@ -177,11 +157,11 @@ export default function LearningModeSelectionPage() {
         <div className="mb-6 text-center slide-up" style={{ animationDelay: "100ms" }}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
             <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Choose Your Path</span>
+            <span className="text-sm font-medium text-primary">Progress your Learning & Earning</span>
           </div>
-          <h3 className="font-heading text-xl font-bold text-foreground">
-            How do you want to learn {config.title} today?
-          </h3>
+          <h1 className="font-heading text-xl font-bold text-foreground">
+            Learn to manage money early — it's the smartest power you can have
+          </h1>
         </div>
 
         {/* Learning Mode Cards */}

@@ -177,10 +177,10 @@ export default function LearningModeSelectionPage() {
         <div className="mb-6 text-center slide-up" style={{ animationDelay: "100ms" }}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
             <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Choose Your Path</span>
+            <span className="text-sm font-medium text-primary">Progress your Learning & Earning</span>
           </div>
           <h3 className="font-heading text-xl font-bold text-foreground">
-            How do you want to learn {config.title} today?
+            <h1>Learn to manage money early — it's the smartest power you can have</h1>
           </h3>
         </div>
 

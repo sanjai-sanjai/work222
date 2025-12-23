@@ -1,89 +1,37 @@
 import { SubjectLayout } from "@/components/student/SubjectLayout";
-import { GameMissionCard } from "@/components/student/GameMissionCard";
-import {
-  VillageLightUp,
-  AppBuilderStudio,
-  DebugDungeon,
-  SystemBuilder,
-  CircuitBuilder,
-  InputOutputLab,
-  NetworkBuilder,
-} from "@/components/games";
-import {
-  Laptop,
-  Zap,
-  Code,
-  Bug,
-  Cog,
-  Lightbulb,
-  RefreshCw,
-  Wifi,
-} from "lucide-react";
+import { GameCard } from "@/components/ui/game-card";
+import { VillageLightUp, DebugDungeon, SystemBuilder } from "@/components/games";
+import { Laptop, Zap, Bug, Cog } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const techGames = [
   {
     title: "Village Light-Up",
-    description: "Build electrical circuits to light up the festival",
+    description: "Complete electrical circuits to light up the festival",
+    emoji: "⚡",
     icon: Zap,
+    path: "/student/technology/village-light-up",
     reward: 150,
     difficulty: "easy" as const,
-    status: "available" as const,
-    gameId: "lightup",
-  },
-  {
-    title: "App Builder Studio",
-    description: "Create working apps by connecting UI and logic",
-    icon: Code,
-    reward: 160,
-    difficulty: "easy" as const,
-    status: "available" as const,
-    gameId: "appbuilder",
-  },
-  {
-    title: "Debug Dungeon",
-    description: "Find and fix logical errors in code",
-    icon: Bug,
-    reward: 155,
-    difficulty: "medium" as const,
-    status: "available" as const,
-    gameId: "debug",
   },
   {
     title: "System Builder",
-    description: "Arrange steps in the correct order for systems to work",
+    description: "Arrange steps in the correct order to make systems work",
+    emoji: "🧩",
     icon: Cog,
+    path: "/student/technology/system-builder",
     reward: 165,
     difficulty: "medium" as const,
-    status: "available" as const,
-    gameId: "system",
   },
   {
-    title: "Circuit Builder",
-    description: "Assemble electronic circuits and test them",
-    icon: Lightbulb,
-    reward: 170,
+    title: "Debug Dungeon",
+    description: "Find and fix logical errors to escape the dungeon",
+    emoji: "🐉",
+    icon: Bug,
+    path: "/student/technology/debug-dungeon",
+    reward: 155,
     difficulty: "medium" as const,
-    status: "available" as const,
-    gameId: "circuit",
-  },
-  {
-    title: "Input Output Lab",
-    description: "Understand how systems process inputs and outputs",
-    icon: RefreshCw,
-    reward: 175,
-    difficulty: "hard" as const,
-    status: "available" as const,
-    gameId: "iolab",
-  },
-  {
-    title: "Network Builder",
-    description: "Connect devices and build communication networks",
-    icon: Wifi,
-    reward: 180,
-    difficulty: "hard" as const,
-    status: "available" as const,
-    gameId: "network",
   },
 ];
 

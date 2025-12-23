@@ -1,5 +1,6 @@
 import { SubjectLayout } from "@/components/student/SubjectLayout";
 import { GameCard } from "@/components/ui/game-card";
+import { BiologyActiveLearning } from "@/components/active-learning/BiologyActiveLearning";
 import { Heart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 

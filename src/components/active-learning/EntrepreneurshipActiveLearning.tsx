@@ -74,7 +74,7 @@ function ProblemSolutionMapper() {
                 className={`w-full text-left p-3 rounded-lg transition-all ${
                   selected === p.id - 1
                     ? "bg-primary/20 text-primary border border-primary/50"
-                    : "bg-white dark:bg-slate-800 border border-border hover:border-primary/50"
+                    : "glass-card bg-card/50 border border-border hover:border-primary/50"
                 }`}
               >
                 <div className="text-sm font-semibold">Problem {p.id}: {p.problem}</div>

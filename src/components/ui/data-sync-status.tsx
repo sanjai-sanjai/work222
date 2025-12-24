@@ -211,13 +211,13 @@ export function DataSyncStatus({ className }: DataSyncStatusProps) {
   const getButtonClasses = () => {
     switch (syncStatus) {
       case 'synced':
-        return 'text-green-500 hover:bg-green-500/10 hover:border-green-500/30';
+        return 'text-green-500 hover:bg-green-500/15 border-green-500/30 hover:border-green-500/50';
       case 'syncing':
-        return 'text-blue-500 hover:bg-blue-500/10 hover:border-blue-500/30';
+        return 'text-blue-500 hover:bg-blue-500/15 border-blue-500/30 hover:border-blue-500/50';
       case 'error':
-        return 'text-red-500 hover:bg-red-500/10 hover:border-red-500/30';
+        return 'text-red-500 hover:bg-red-500/15 border-red-500/30 hover:border-red-500/50';
       default: // unsynced
-        return 'text-red-500 hover:bg-red-500/10 hover:border-red-500/30';
+        return 'text-red-500 hover:bg-red-500/15 border-red-500/30 hover:border-red-500/50';
     }
   };
 

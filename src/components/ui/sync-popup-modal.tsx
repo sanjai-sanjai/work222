@@ -592,6 +592,10 @@ export function SyncPopupModal({
           animation: modal-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
         }
 
+        .animate-modal-pop-success {
+          animation: modal-pop-success 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
         .animate-success-ring {
           animation: success-ring 0.8s ease-out forwards;
         }

@@ -68,12 +68,13 @@ const levels: GameLevel[] = [
 ];
 
 export default function PhysicsSubjectPage() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const totalProgress = 65;
   const completedLevels = levels.filter(l => l.status === "completed").length;
 
   return (
-    <AppLayout role="student" playCoins={1250} title="Physics">
+    <AppLayout role="student" playCoins={1250} title={t('subjects.physics')}>
       <div className="px-4 py-6 pb-24">
         {/* Subject Header */}
         <div className="mb-6 slide-up">

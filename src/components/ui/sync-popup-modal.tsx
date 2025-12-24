@@ -182,9 +182,9 @@ export function SyncPopupModal({
 
           {/* Timestamp */}
           {!isSyncing && isSuccess && lastSyncTime && (
-            <div className="flex items-center justify-center gap-2 pt-2 border-t border-border">
-              <Clock className="w-4 h-4 text-muted-foreground" />
-              <p className="text-xs text-muted-foreground">
+            <div className="flex items-center justify-center gap-2 pt-2 border-t border-slate-700">
+              <Clock className="w-4 h-4 text-gray-400" />
+              <p className="text-xs text-gray-400">
                 {t('sync.lastSynced')}: {formatSyncTime(lastSyncTime)}
               </p>
             </div>

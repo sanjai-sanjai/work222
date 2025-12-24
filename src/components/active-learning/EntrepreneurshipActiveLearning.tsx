@@ -243,7 +243,7 @@ function CostVsProfitSlider() {
           </div>
         </div>
 
-        <div className="text-xs text-center text-muted-foreground bg-white dark:bg-slate-800 p-2 rounded">
+        <div className="text-xs text-center text-muted-foreground glass-card border border-border/50 p-2 rounded">
           Find the right balance between cost, price, and demand
         </div>
       </div>

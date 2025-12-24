@@ -301,7 +301,7 @@ export function SyncPopupModal({
             {syncItems.map((item, index) => {
               const isCompleted = completedItems.includes(item.id);
               const isCurrent = !isCompleted && syncItems.slice(0, index).every(i => completedItems.includes(i.id));
-              
+
               return (
                 <div
                   key={item.id}
@@ -316,44 +316,54 @@ export function SyncPopupModal({
                     animation: isCompleted ? `slideInSync 0.4s ease-out forwards` : 'none',
                   }}
                 >
-                  {/* Icon - animated loader or checkmark */}
-                  <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center relative">
+                  {/* Icon - sync arrows or checkmark */}
+                  <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
                     {isCompleted ? (
-                      <div className="relative w-5 h-5">
-                        <svg
-                          className="absolute inset-0 w-5 h-5 text-green-400"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M5 10L8 13L15 6"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="animate-success-check-small"
-                          />
-                        </svg>
-                        {/* Pulse effect for completed item */}
-                        <div 
-                          className="absolute inset-0 rounded-full bg-green-400/30"
-                          style={{
-                            animation: 'pulse-check 0.6s ease-out forwards'
-                          }}
-                          aria-hidden="true"
-                        />
-                      </div>
-                    ) : isCurrent && isSyncing ? (
-                      <div
-                        className="w-2 h-2 rounded-full bg-purple-400"
-                        style={{
-                          animation: 'smooth-pulse 2s ease-in-out infinite'
-                        }}
+                      <svg
+                        className="w-5 h-5 text-green-400"
+                        viewBox="0 0 20 20"
+                        fill="none"
                         aria-hidden="true"
-                      />
+                      >
+                        <path
+                          d="M5 10L8 13L15 6"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="animate-success-check-small"
+                        />
+                      </svg>
+                    ) : isCurrent && isSyncing ? (
+                      <svg
+                        className="w-5 h-5 text-purple-400 animate-sync-arrows"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
                     ) : (
-                      <div className="w-2 h-2 rounded-full bg-gray-500/50" aria-hidden="true" />
+                      <svg
+                        className="w-5 h-5 text-gray-500/50"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
                     )}
                   </div>
 

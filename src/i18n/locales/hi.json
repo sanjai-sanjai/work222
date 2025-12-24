@@ -36,6 +36,16 @@
     "logout": "लॉगआउट",
     "settings": "सेटिंग्स"
   },
+  "sync": {
+    "lastSynced": "अंतिम सिंक",
+    "syncing": "सिंक हो रहा है...",
+    "syncedUpToDate": "✅ अद्यतन के साथ सिंक हो गया",
+    "readyToSync": "सिंक के लिए तैयार",
+    "justNow": "अभी-अभी",
+    "unknown": "कभी सिंक नहीं हुआ",
+    "offline": "ऑफ़लाइन — कनेक्ट होने पर सिंक होगा",
+    "languageChanged": "भाषा हिंदी में बदल दी गई है"
+  },
   "languages": {
     "english": "English",
     "hindi": "हिंदी",

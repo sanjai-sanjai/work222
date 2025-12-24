@@ -5,6 +5,7 @@ interface EduCoinProps {
   size?: "sm" | "md" | "lg" | "xl";
   animated?: boolean;
   className?: string;
+  imgClassName?: string;
   showLabel?: boolean;
 }
 

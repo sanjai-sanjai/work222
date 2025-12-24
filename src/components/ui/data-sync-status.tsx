@@ -200,15 +200,18 @@ export function DataSyncStatus({ className }: DataSyncStatusProps) {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2.5"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
           aria-hidden="true"
         >
-          {/* Top right curved arrow */}
-          <path d="M21.5 2.5L21.5 9m0 0h-6.5m6.5 0c-2.76-2.76-7.24-2.76-10 0s-2.76 7.24 0 10" />
-          {/* Bottom left curved arrow */}
-          <path d="M2.5 21.5h6.5m0 0v-6.5m0 6.5c2.76 2.76 7.24 2.76 10 0s2.76-7.24 0-10" />
+          {/* Top right arrow with arc */}
+          <path d="M22 12a10 10 0 0 1-10 10" />
+          <path d="M22 8v4h-4" />
+
+          {/* Bottom left arrow with arc */}
+          <path d="M2 12a10 10 0 0 0 10 10" />
+          <path d="M2 16v-4h4" />
         </svg>
 
         {/* Status Badge for Success */}

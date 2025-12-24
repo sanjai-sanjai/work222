@@ -585,6 +585,10 @@ export function SyncPopupModal({
           animation: pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
         }
 
+        .animate-sync-arrows {
+          animation: sync-arrows 2s ease-in-out infinite;
+        }
+
         @keyframes pop {
           from {
             opacity: 0;

@@ -240,7 +240,7 @@ function FarmTaskSequencer() {
           </div>
         )}
 
-        <div className="text-xs text-center text-muted-foreground bg-white dark:bg-slate-800 p-2 rounded">
+        <div className="text-xs text-center text-muted-foreground bg-slate-800/50 border border-slate-700/50 p-2 rounded backdrop-blur-sm">
           Order and timing are critical for farming success
         </div>
       </div>

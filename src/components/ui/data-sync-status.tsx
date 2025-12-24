@@ -225,7 +225,7 @@ export function DataSyncStatus({ className }: DataSyncStatusProps) {
   const displayText = () => {
     switch (syncStatus) {
       case 'synced':
-        return t('sync.upToDate');
+        return 'Up to date ✓';
       case 'syncing':
         return t('sync.syncing');
       case 'error':

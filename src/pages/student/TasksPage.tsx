@@ -302,9 +302,9 @@ export default function TasksPage() {
         <div className="slide-up space-y-4">
           <div className="glass-card rounded-2xl p-5 border border-border">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="font-heading text-2xl font-bold text-foreground">Your Tasks</h2>
+              <h2 className="font-heading text-2xl font-bold text-foreground">{t('tasks.yourTasks')}</h2>
               <Badge className="bg-secondary/20 text-secondary border-secondary/30">
-                {taskStats.completed}/{userTasks.length} Done
+                {taskStats.completed}/{userTasks.length} {t('tasks.status.completed')}
               </Badge>
             </div>
 

@@ -527,7 +527,7 @@ export default function RewardsPage() {
                       {almostThere && (
                         <div className="absolute top-2 right-2 z-10 bg-accent/90 text-accent-foreground px-2 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                           <Zap className="h-3 w-3" />
-                          Almost there!
+                          {t('rewards.almostThere')}
                         </div>
                       )}
 

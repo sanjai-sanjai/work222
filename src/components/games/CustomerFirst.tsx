@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowLeft } from "lucide-react";
 
 interface GameState {
   phase: "splash" | "selling" | "feedback" | "improvement" | "results";

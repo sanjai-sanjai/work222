@@ -300,7 +300,7 @@ function HouseholdFixIt() {
         {problems.map((problem) => (
           <div
             key={problem.id}
-            className="p-3 rounded-lg border border-border bg-white dark:bg-slate-800"
+            className="p-3 rounded-lg border border-slate-700/50 bg-slate-800/50 backdrop-blur-sm"
           >
             <div className="font-semibold text-sm mb-3">Problem {problem.id}: {problem.problem}</div>
 

@@ -36,6 +36,7 @@ const EntrepreneurshipSubjectPage = lazy(() => import("./pages/student/subjects/
 const BiologySubjectPage = lazy(() => import("./pages/student/subjects/BiologySubjectPage"));
 const MathematicsSubjectPage = lazy(() => import("./pages/student/subjects/MathematicsSubjectPage"));
 const TechnologySubjectPage = lazy(() => import("./pages/student/subjects/TechnologySubjectPage"));
+const TechnologyActiveLearningPage = lazy(() => import("./pages/student/subjects/TechnologyActiveLearningPage"));
 const VillageSkillsSubjectPage = lazy(() => import("./pages/student/subjects/VillageSkillsSubjectPage"));
 const GameLevelPage = lazy(() => import("./pages/student/games/GameLevelPage"));
 const LeaderboardPage = lazy(() => import("./pages/student/LeaderboardPage"));

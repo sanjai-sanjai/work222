@@ -71,13 +71,13 @@ export function SyncPopupModal({
       />
 
       {/* Centered Modal */}
-      <div className="fixed inset-0 z-[101] flex items-center justify-center p-4 pointer-events-none">
+      <div className="fixed inset-0 z-[101] flex items-center justify-center p-4 pointer-events-none overflow-y-auto">
         <div
           className={cn(
-            'w-full max-w-md pointer-events-auto rounded-2xl',
-            'bg-gradient-to-br from-white/95 to-white/85 dark:from-slate-900/95 dark:to-slate-900/85',
-            'backdrop-blur-xl border border-white/20 dark:border-white/10',
-            'shadow-2xl dark:shadow-2xl/50',
+            'w-full max-w-md pointer-events-auto rounded-2xl my-auto',
+            'bg-gradient-to-br from-slate-900/95 to-slate-800/95',
+            'backdrop-blur-xl border border-white/10',
+            'shadow-2xl',
             'p-6 sm:p-8',
             'animate-pop',
             'flex flex-col gap-6'

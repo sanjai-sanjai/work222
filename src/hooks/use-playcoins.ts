@@ -33,14 +33,33 @@ export function usePlayCoins() {
     queryKey: ["playcoins-wallet", user?.id],
     queryFn: async () => {
       if (!user?.id) return null;
-      const { data, error } = await supabase
-        .from("playcoins_wallets")
-        .select("*")
-        .eq("user_id", user.id)
-        .maybeSingle();
-      
-      if (error) throw error;
-      return data as PlayCoinsWallet | null;
+
+      // Return demo wallet if Supabase not configured
+      if (!hasSupabaseConfig()) {
+        return {
+          id: "demo-wallet",
+          user_id: user.id,
+          balance: 1250,
+          total_earned: 5000,
+          total_spent: 3750,
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
+        } as PlayCoinsWallet;
+      }
+
+      try {
+        const { data, error } = await supabase
+          .from("playcoins_wallets")
+          .select("*")
+          .eq("user_id", user.id)
+          .maybeSingle();
+
+        if (error) throw error;
+        return data as PlayCoinsWallet | null;
+      } catch (error) {
+        console.error("Error fetching wallet:", error);
+        return null;
+      }
     },
     enabled: !!user?.id,
   });

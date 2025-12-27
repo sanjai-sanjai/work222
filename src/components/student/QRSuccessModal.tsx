@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
+import { useSoundEffects } from "@/hooks/use-sound-effects";
 import type { RedemptionData } from "@/lib/qr-utils";
 
 interface QRSuccessModalProps {

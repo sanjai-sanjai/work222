@@ -566,14 +566,14 @@ export default function RewardsPage() {
                 </div>
               </div>
             </div>
-            {/* ============ PRIMARY CTA BUTTON ============ */}
+            {/* ============ QR WALLET BUTTON ============ */}
             <div className="mb-6 slide-up" style={{ animationDelay: "50ms" }}>
               <Button
                 size="lg"
                 onClick={handleOpenMyRewards}
-                className="w-full bg-gradient-to-r from-primary to-primary/80 text-sm"
+                className="w-full bg-gradient-to-r from-secondary to-secondary/80 text-sm hover:from-secondary/95 hover:to-secondary/85"
               >
-                {t('rewards.redeemRewards')} {savedRedemptions.length > 0 && `(${savedRedemptions.length})`}
+                <span>📱</span> QR Wallet {savedRedemptions.length > 0 && `(${savedRedemptions.length})`}
               </Button>
             </div>
 

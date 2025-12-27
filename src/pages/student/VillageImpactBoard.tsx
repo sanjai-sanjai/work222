@@ -129,14 +129,15 @@ export default function VillageImpactBoard() {
   const anonymousActions = generateAnonymousActions();
 
   // Calculate village stats
-  const totalActiveLearners = leaderboard.length;
-  const totalVillageXP = leaderboard.reduce((sum, entry) => sum + entry.total_xp, 0);
-  const villageLevel = Math.floor(totalVillageXP / 10000) + 1;
+  const totalActiveLearners = Math.max(leaderboard.length, 0);
+  const totalVillageXP = Math.max(leaderboard.reduce((sum, entry) => sum + (entry.total_xp || 0), 0), 0);
+  const villageLevel = Math.max(Math.floor(totalVillageXP / 10000) + 1, 1);
 
   // Get current user from leaderboard
   const currentUserData = leaderboard.find((entry) => entry.user_id === user?.id) as ImpactContributor | undefined;
-  const userStreak = currentUserData?.day_streak || 0;
-  const userVillageTasks = currentUserData?.village_tasks_completed || 0;
+  const userStreak = Math.max(currentUserData?.day_streak || 0, 0);
+  const userVillageTasks = Math.max(currentUserData?.village_tasks_completed || 0, 0);
+  const userContributionScore = Math.max(currentUserData?.contribution_score || 0, 0);
 
   return (
     <AppLayout role="student" playCoins={wallet?.balance || 0} title="Village Impact Board">

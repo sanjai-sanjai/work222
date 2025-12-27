@@ -628,11 +628,13 @@ export default function RewardsPage() {
                   return (
                     <Card
                       key={product.id}
-                      className={`relative glass-card border overflow-hidden rounded-2xl transition-all duration-300 flex flex-col ${canAfford
-                        ? "border-border/50 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1"
+                      onClick={() => canAfford && handleRedeem(product)}
+                      onPointerDown={() => canAfford && handleRedeem(product)}
+                      className={`relative glass-card border overflow-hidden rounded-2xl transition-all duration-300 flex flex-col cursor-pointer ${canAfford
+                        ? "border-border/50 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 active:scale-95"
                         : almostThere
                           ? "border-primary/40 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/15"
-                          : "border-border/30 opacity-75"
+                          : "border-border/30 opacity-75 cursor-not-allowed"
                         }`}
                       style={{ animationDelay: `${200 + index * 40}ms` }}
                     >

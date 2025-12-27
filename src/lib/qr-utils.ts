@@ -4,6 +4,13 @@
  * Offline-first design for village environments
  */
 
+/**
+ * Generate a simple unique ID (not a true UUID, but sufficient for offline use)
+ */
+function generateUniqueId(): string {
+  return `${Date.now()}_${Math.random().toString(36).substring(2, 15)}`;
+}
+
 export interface RedemptionData {
   id: string;
   studentId: string;

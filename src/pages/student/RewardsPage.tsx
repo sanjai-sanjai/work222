@@ -114,7 +114,8 @@ export default function RewardsPage() {
       );
 
       setGeneratedRedemption(redemptionData);
-      setShowQRSuccessModal(true);
+      // Show QR Result Screen instead of modal
+      setShowQRResultScreen(true);
     }, 5000);
   };
 
@@ -131,26 +132,42 @@ export default function RewardsPage() {
       // Save to redemptions list
       setSavedRedemptions([...savedRedemptions, generatedRedemption]);
 
-      // Show old success modal briefly for compatibility
-      if (selectedProduct) {
-        setRedeemedItem(selectedProduct.name);
-        setRedeemedPrice(selectedProduct.educoinsCost);
-        setShowSuccess(true);
-        setTimeout(() => setShowSuccess(false), 3000);
-      }
-
       playSuccess?.();
       toast.success(
         t("redemption.savedToWallet", {
-          defaultValue: "Redemption saved to My Redemptions wallet!",
+          defaultValue: "Redemption saved to My Rewards!",
         })
       );
 
-      // Close QR modal
-      setShowQRSuccessModal(false);
+      // Close QR screen and stay in marketplace
+      setShowQRResultScreen(false);
       setGeneratedRedemption(null);
       setSelectedProduct(null);
     }
+  };
+
+  // Handle back from QR Result Screen
+  const handleBackFromQR = () => {
+    setShowQRResultScreen(false);
+    setGeneratedRedemption(null);
+    setSelectedProduct(null);
+  };
+
+  // Handle opening My Rewards wallet
+  const handleOpenMyRewards = () => {
+    setShowMyRewardsScreen(true);
+  };
+
+  // Handle back from My Rewards
+  const handleBackFromMyRewards = () => {
+    setShowMyRewardsScreen(false);
+  };
+
+  // Handle viewing QR from wallet
+  const handleViewQRFromWallet = (redemption: RedemptionData) => {
+    setGeneratedRedemption(redemption);
+    setShowQRResultScreen(true);
+    setShowMyRewardsScreen(false);
   };
 
   // Legacy handleRedeem for backward compatibility (simple redemption)

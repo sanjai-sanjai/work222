@@ -420,13 +420,13 @@ export default function VillageImpactBoard() {
                   <span>Progress</span>
                   <span>6 of 10</span>
                 </div>
-                <AnimatedProgress value={60} variant="default" className="h-2" />
+                <AnimatedProgress value={Math.min(Math.max(60, 0), 100)} variant="default" className="h-2" />
               </div>
 
               <div className="grid grid-cols-2 gap-2">
                 <div className="bg-background/50 rounded-lg p-2 border border-border/50">
                   <p className="text-xs text-muted-foreground">Participants</p>
-                  <p className="font-bold text-foreground">{totalActiveLearners} students</p>
+                  <p className="font-bold text-foreground">{Math.max(totalActiveLearners, 0)} students</p>
                 </div>
                 <div className="bg-background/50 rounded-lg p-2 border border-border/50">
                   <p className="text-xs text-muted-foreground">Time Left</p>
